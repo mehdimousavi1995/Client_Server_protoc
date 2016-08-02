@@ -1,0 +1,22 @@
+syntax = 'proto2';
+
+import "scalapb/scalapb.proto";
+
+option java_package = "com.elenoon.nasim";
+option java_outer_classname = "request";
+
+
+message requestEcho {
+    optional string echoMsg = 1;
+}
+
+message RPcOk {
+    optional string RPcMsg = 1;
+    message response {
+        optional string responseMsg = 2;
+    }
+}
+
+message RPcError {
+    optional string errorMsg = 1;
+}
